@@ -74,4 +74,4 @@ async def on_member_join(member):
         await channel.send(f"I was Unable To send to {member}")
 
 
-bot.run('TOKEN')
+bot.run(TOKEN)
