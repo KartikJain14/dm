@@ -6,14 +6,9 @@ from discord.flags import Intents
 import random
 import time
 from pypresence import Presence
-client_id = "801453889236762714"
-rpc = Presence(client_id)
-rpc.connect()
-rpc.update(state="You Have A Chance Of Winning Nitro", details="Join our Server for daily Giveaways", large_image="1f389", small_image="discord-white-icon-27",
-           buttons=[{"label": "Join The Server", "url": "https://dsc.gg/kartik"}, {"label": "Also Check My YouTube", "url": "https://youtube.com/c/KartikJainChannel"}])
+import os
 
-bot = commands.Bot(command_prefix="/*/", intents=discord.Intents.all())
-
+token = os.getenv('TOKEN')
 
 @bot.event
 async def on_ready():
@@ -79,4 +74,4 @@ async def on_member_join(member):
         await channel.send(f"I was Unable To send to {member}")
 
 
-bot.run('ODI0MzA1NzQxMDkwMjU4OTk0.YFtciw.4XfJX1A7nU6A3hFfkLuY3posfqs')
+bot.run('TOKEN')
